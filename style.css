@@ -12,7 +12,7 @@
   grid-template-areas:
     "hdr hdr hdr"
     "nav art ads"
-    "ftr ftr ftr"
+    "ftr ftr ftr"5
   
 }
 
@@ -43,8 +43,8 @@
 }
 
 @media(max-width: 1099px) and (min-width: 700px) {
-  #app {
 
+  #app {
     font-size: 3.5em; 
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 10% 50% 25%;
@@ -53,20 +53,25 @@
     "nav nav"
     "art ads"
     "ftr ftr"
-
   }
 }
 
 @media(max-width: 699px) {
-  #app {
 
+  #app {
+    grid-template-columns: 100%;
     grid-template-rows: 30% 15% 40% 20% 30%;
     grid-template-areas: 
-    "hdr hdr"
-    "nav nav"
-    "art art"
-    "ads ads"
-    "ftr ftr"
+    "hdr"
+    "nav"
+    "art"
+    "ads"
+    "ftr"
+  }
 
+  #nav {
+    display: flex;
+    justify-content: center;
+    align-content: center;
   }
 }
