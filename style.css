@@ -13,7 +13,7 @@
     "hdr hdr hdr"
     "nav art ads"
     "ftr ftr ftr"
-  ;
+  
 }
 
 #header {
@@ -24,6 +24,7 @@
 #nav {
   grid-area: nav;
   background-color: #4b4e6d;
+  align-content: center;
 }
 
 #articles {
@@ -39,4 +40,33 @@
 #footer {
   grid-area: ftr;
   background-color: #f08a4b;
+}
+
+@media(max-width: 1099px) and (min-width: 700px) {
+  #app {
+
+    font-size: 3.5em; 
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 10% 50% 25%;
+    grid-template-areas: 
+    "hdr hdr"
+    "nav nav"
+    "art ads"
+    "ftr ftr"
+
+  }
+}
+
+@media(max-width: 699px) {
+  #app {
+
+    grid-template-rows: 30% 15% 40% 20% 30%;
+    grid-template-areas: 
+    "hdr hdr"
+    "nav nav"
+    "art art"
+    "ads ads"
+    "ftr ftr"
+
+  }
 }
